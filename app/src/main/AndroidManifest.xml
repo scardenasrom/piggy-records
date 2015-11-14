@@ -3,6 +3,7 @@
     package="herkiusdev.com.piggy_records" >
 
     <application
+        android:name=".PiggyRecordsApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"

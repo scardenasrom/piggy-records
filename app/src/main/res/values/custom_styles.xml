@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="calc_button">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">@dimen/calc_button_text_size</item>
+        <item name="android:layout_margin">@dimen/calc_button_margin</item>
+        <item name="android:paddingBottom">@dimen/calc_button_vertical_padding</item>
+        <item name="android:paddingLeft">@dimen/calc_button_horizontal_padding</item>
+        <item name="android:paddingRight">@dimen/calc_button_horizontal_padding</item>
+        <item name="android:paddingTop">@dimen/calc_button_vertical_padding</item>
+        <item name="fontPath">fonts/merriweather.ttf</item>
+    </style>
+
+    <style name="green_button" parent="calc_button">
+        <item name="android:background">@drawable/green_button_selector</item>
+    </style>
+
+    <style name="orange_button">
+    </style>
+
+    <style name="blue_button">
+
+    </style>
+
+    <style name="quantity_text_style">
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">@dimen/calc_quantity_text_size</item>
+        <item name="fontPath">fonts/merriweather.ttf</item>
+    </style>
+
+</resources>

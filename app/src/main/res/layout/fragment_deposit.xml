@@ -1,18 +1,195 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/color_primary">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/deposit_first_row"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/deposit"
-        android:textColor="@android:color/white"
-        android:textSize="40sp"
-        android:textStyle="bold"
-        android:layout_centerInParent="true"
-        />
+        android:layout_alignParentBottom="true"
+        >
+
+        <Button
+            android:id="@+id/deposit_comma"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/number_comma"
+            style="@style/green_button"
+            />
+
+        <Button
+            android:id="@+id/deposit_zero"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/number_zero"
+            style="@style/green_button"
+            />
+
+        <Button
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            style="@style/green_button"
+            android:visibility="invisible"
+            />
+
+        <ImageButton
+            android:id="@+id/deposit_validate"
+            android:src="@drawable/ic_validate"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            style="@style/green_button"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/deposit_second_row"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/deposit_first_row"
+        >
+
+        <Button
+            android:id="@+id/deposit_seven"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/number_seven"
+            style="@style/green_button"
+            />
+
+        <Button
+            android:id="@+id/deposit_eight"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/number_eight"
+            style="@style/green_button"
+            />
+
+        <Button
+            android:id="@+id/deposit_nine"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/number_nine"
+            style="@style/green_button"
+            />
+
+        <Button
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            style="@style/green_button"
+            android:visibility="invisible"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/deposit_third_row"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/deposit_second_row"
+        >
+
+        <Button
+            android:id="@+id/deposit_four"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/number_four"
+            style="@style/green_button"
+            />
+
+        <Button
+            android:id="@+id/deposit_five"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/number_five"
+            style="@style/green_button"
+            />
+
+        <Button
+            android:id="@+id/deposit_six"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/number_six"
+            style="@style/green_button"
+            />
+
+        <Button
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            style="@style/green_button"
+            android:visibility="invisible"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/deposit_fourth_row"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/deposit_third_row"
+        >
+
+        <Button
+            android:id="@+id/deposit_one"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/number_one"
+            style="@style/green_button"
+            />
+
+        <Button
+            android:id="@+id/deposit_two"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/number_two"
+            style="@style/green_button"
+            />
+
+        <Button
+            android:id="@+id/deposit_three"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/number_three"
+            style="@style/green_button"
+            />
+
+        <ImageButton
+            android:id="@+id/deposit_delete"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_delete"
+            style="@style/green_button"
+            />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/deposit_quantity"
+        android:text="457,49 €"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/deposit_fourth_row"
+        style="@style/quantity_text_style"/>
 
 </RelativeLayout>

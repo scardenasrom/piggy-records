@@ -1,5 +1,6 @@
 package herkiusdev.com.piggy_records;
 
+import android.content.Context;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Build;
 import android.os.Bundle;
@@ -19,6 +20,7 @@ import herkiusdev.com.piggy_records.adapter.ViewPagerAdapter;
 import herkiusdev.com.piggy_records.fragment.DepositFragment;
 import herkiusdev.com.piggy_records.fragment.WithdrawFragment;
 import herkiusdev.com.piggy_records.util.FadePageTransformer;
+import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -131,6 +133,11 @@ public class MainActivity extends AppCompatActivity
         adapter.addFragment(new DepositFragment(), getResources().getText(R.string.deposit).toString());
         adapter.addFragment(new WithdrawFragment(), getResources().getText(R.string.withdraw).toString());
         viewPager.setAdapter(adapter);
+    }
+
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
     }
 
 }
