@@ -16,9 +16,13 @@ import android.view.MenuItem;
 import android.view.Window;
 import android.view.WindowManager;
 
+import org.androidannotations.annotations.EActivity;
+
 import herkiusdev.com.piggy_records.adapter.ViewPagerAdapter;
 import herkiusdev.com.piggy_records.fragment.DepositFragment;
+import herkiusdev.com.piggy_records.fragment.DepositFragment_;
 import herkiusdev.com.piggy_records.fragment.WithdrawFragment;
+import herkiusdev.com.piggy_records.fragment.WithdrawFragment_;
 import herkiusdev.com.piggy_records.util.FadePageTransformer;
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
@@ -130,8 +134,8 @@ public class MainActivity extends AppCompatActivity
             }
         });
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
-        adapter.addFragment(new DepositFragment(), getResources().getText(R.string.deposit).toString());
-        adapter.addFragment(new WithdrawFragment(), getResources().getText(R.string.withdraw).toString());
+        adapter.addFragment(new DepositFragment_(), getResources().getText(R.string.deposit).toString());
+        adapter.addFragment(new WithdrawFragment_(), getResources().getText(R.string.withdraw).toString());
         viewPager.setAdapter(adapter);
     }
 

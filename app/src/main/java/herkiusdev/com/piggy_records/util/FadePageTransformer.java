@@ -5,15 +5,41 @@ import android.view.View;
 
 public class FadePageTransformer implements ViewPager.PageTransformer {
     public void transformPage(View view, float position) {
-        view.setTranslationX(view.getWidth() * -position);
 
-        if(position <= -1.0F || position >= 1.0F) {
-            view.setAlpha(0.0F);
-        } else if( position == 0.0F ) {
-            view.setAlpha(1.0F);
+        final int pageWidth = view.getWidth();
+
+        if (position < -0.999f) {
+            view.setAlpha(0);
+            view.setVisibility(View.GONE);
+            view.setTranslationX(pageWidth);
+        } else if (position <= 0.999f) { // (-1, 1)
+            view.setAlpha(getAlpha(position));
+            view.setTranslationX(pageWidth * -position);
+            view.setVisibility(View.VISIBLE);
         } else {
-            // position is between -1.0F & 0.0F OR 0.0F & 1.0F
-            view.setAlpha(1.0F - Math.abs(position));
+            view.setAlpha(0);
+            view.setVisibility(View.GONE);
+            view.setTranslationX(-pageWidth);
         }
+    }
+
+    private static final float getAlpha(final float position) {
+        return getSlowQuadraticAlpha(position);
+    }
+
+    private static final float getLinearAlpha(final float position) {
+        if (position <= 0) {
+            return 1 + position;
+        }
+        return 1 - position;
+    }
+
+    private static final float getFastQuadraticAlpha(final float position) {
+        final float linearAlpha = getLinearAlpha(position);
+        return linearAlpha * linearAlpha;
+    }
+
+    private static final float getSlowQuadraticAlpha(final float position) {
+        return 1 - position * position;
     }
 }

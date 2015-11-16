@@ -12,7 +12,7 @@
         android:layout_alignParentBottom="true"
         >
 
-        <Button
+        <android.support.v7.widget.AppCompatButton
             android:id="@+id/deposit_comma"
             android:layout_weight="1"
             android:layout_width="0dp"
@@ -21,7 +21,7 @@
             style="@style/green_button"
             />
 
-        <Button
+        <android.support.v7.widget.AppCompatButton
             android:id="@+id/deposit_zero"
             android:layout_weight="1"
             android:layout_width="0dp"
@@ -30,7 +30,7 @@
             style="@style/green_button"
             />
 
-        <Button
+        <android.support.v7.widget.AppCompatButton
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -56,7 +56,7 @@
         android:layout_above="@+id/deposit_first_row"
         >
 
-        <Button
+        <android.support.v7.widget.AppCompatButton
             android:id="@+id/deposit_seven"
             android:layout_weight="1"
             android:layout_width="0dp"
@@ -65,7 +65,7 @@
             style="@style/green_button"
             />
 
-        <Button
+        <android.support.v7.widget.AppCompatButton
             android:id="@+id/deposit_eight"
             android:layout_weight="1"
             android:layout_width="0dp"
@@ -74,7 +74,7 @@
             style="@style/green_button"
             />
 
-        <Button
+        <android.support.v7.widget.AppCompatButton
             android:id="@+id/deposit_nine"
             android:layout_weight="1"
             android:layout_width="0dp"
@@ -83,7 +83,7 @@
             style="@style/green_button"
             />
 
-        <Button
+        <android.support.v7.widget.AppCompatButton
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -101,7 +101,7 @@
         android:layout_above="@+id/deposit_second_row"
         >
 
-        <Button
+        <android.support.v7.widget.AppCompatButton
             android:id="@+id/deposit_four"
             android:layout_weight="1"
             android:layout_width="0dp"
@@ -110,7 +110,7 @@
             style="@style/green_button"
             />
 
-        <Button
+        <android.support.v7.widget.AppCompatButton
             android:id="@+id/deposit_five"
             android:layout_weight="1"
             android:layout_width="0dp"
@@ -119,7 +119,7 @@
             style="@style/green_button"
             />
 
-        <Button
+        <android.support.v7.widget.AppCompatButton
             android:id="@+id/deposit_six"
             android:layout_weight="1"
             android:layout_width="0dp"
@@ -128,7 +128,7 @@
             style="@style/green_button"
             />
 
-        <Button
+        <android.support.v7.widget.AppCompatButton
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -146,7 +146,7 @@
         android:layout_above="@+id/deposit_third_row"
         >
 
-        <Button
+        <android.support.v7.widget.AppCompatButton
             android:id="@+id/deposit_one"
             android:layout_weight="1"
             android:layout_width="0dp"
@@ -155,7 +155,7 @@
             style="@style/green_button"
             />
 
-        <Button
+        <android.support.v7.widget.AppCompatButton
             android:id="@+id/deposit_two"
             android:layout_weight="1"
             android:layout_width="0dp"
@@ -164,7 +164,7 @@
             style="@style/green_button"
             />
 
-        <Button
+        <android.support.v7.widget.AppCompatButton
             android:id="@+id/deposit_three"
             android:layout_weight="1"
             android:layout_width="0dp"
@@ -186,7 +186,7 @@
 
     <TextView
         android:id="@+id/deposit_quantity"
-        android:text="457,49 €"
+        android:text="0"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@+id/deposit_fourth_row"

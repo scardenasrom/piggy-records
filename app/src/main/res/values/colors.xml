@@ -5,4 +5,5 @@
     <color name="color_primary_alt">#FF9800</color>
     <color name="color_primary_dark_alt">#F57C00</color>
     <color name="color_accent">#00B0FF</color>
+    <color name="holo_light_blue_transparent">#8033B5E5</color>
 </resources>

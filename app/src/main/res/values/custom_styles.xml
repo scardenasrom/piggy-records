@@ -10,13 +10,15 @@
         <item name="android:paddingRight">@dimen/calc_button_horizontal_padding</item>
         <item name="android:paddingTop">@dimen/calc_button_vertical_padding</item>
         <item name="fontPath">fonts/merriweather.ttf</item>
+        <item name="android:stateListAnimator">@null</item>
     </style>
 
     <style name="green_button" parent="calc_button">
         <item name="android:background">@drawable/green_button_selector</item>
     </style>
 
-    <style name="orange_button">
+    <style name="orange_button" parent="calc_button">
+        <item name="android:background">@drawable/orange_button_selector</item>
     </style>
 
     <style name="blue_button">
