@@ -62,6 +62,9 @@ public class DepositFragment extends Fragment implements View.OnClickListener {
         depositSeven.setOnClickListener(this);
         depositEight.setOnClickListener(this);
         depositNine.setOnClickListener(this);
+        depositComma.setOnClickListener(this);
+        depositDelete.setOnClickListener(this);
+        depositValidate.setOnClickListener(this);
     }
 
     @Override
@@ -86,16 +89,57 @@ public class DepositFragment extends Fragment implements View.OnClickListener {
             write("8");
         } else if (v == depositNine) {
             write("9");
+        } else if (v == depositComma) {
+            writeComma();
+        } else if (v == depositDelete) {
+            delete();
+        } else if (v == depositValidate) {
+            validateDeposit();
         }
     }
 
     private void write(String s){
         calcText = depositText.getText().toString();
-        if (calcText.equals("0")){
-            depositText.setText(s);
+        if (!calcText.contains(",")){
+            if (calcText.equals("0")){
+                depositText.setText(s);
+            } else {
+                depositText.setText(calcText+s);
+            }
         } else {
-            depositText.setText(calcText+s);
+            String parts[] = calcText.split(",");
+            if (parts.length == 1){
+                depositText.setText(calcText+s);
+            } else {
+                if (parts[1].length()<2){
+                    depositText.setText(calcText+s);
+                }
+            }
         }
+    }
+
+    private void writeComma(){
+        calcText = depositText.getText().toString();
+        if (!calcText.contains(",")){
+            depositText.setText(calcText+",");
+        }
+    }
+
+    private void delete(){
+        calcText = depositText.getText().toString();
+        if (calcText.length()==1){
+            depositText.setText("0");
+        } else {
+            calcText = calcText.substring(0, calcText.length()-1);
+            depositText.setText(calcText);
+        }
+    }
+
+    private void validateDeposit(){
+        calcText = depositText.getText().toString().replace(",", ".");
+        float depositAmount = Float.parseFloat(calcText);
+        //TODO Depositar la cantidad de la cuenta que sea
+        depositText.setText("0");
     }
 
 }
